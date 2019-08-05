@@ -23,8 +23,8 @@
 #' @author Zhongshang Yuan, Xiang Zhou.
 #' 
 #' @examples 
-#' data(Exampleindividual.rda)
-#' attach(Exampleindividual.rda)
+#' data(Exampleindividual)
+#' attach(Exampleindividual)
 #' fmH1 = PMR_individual(yin=x, zin=y, x1in=zx, x2in=zy,gammain=0,alphain = 0,max_iterin =1000,epsin=1e-5)
 #' alpha<-fmH1$alpha
 #' gamma<-fmH1$gamma
@@ -41,7 +41,8 @@
 #' @export
 #'
 
-PMR_individual <- function(yin, zin, x1in, x2in, gammain, alphain, max_iterin, epsin) {
+PMR_individual <- function(yin, zin, x1in, x2in, gammain, alphain, max_iterin = 1000, 
+                           epsin = 1e-05) {
   
   # call Rcpp to carry out computation
   PMR_individual_rcpp(yin = yin, 
@@ -81,8 +82,8 @@ PMR_individual <- function(yin, zin, x1in, x2in, gammain, alphain, max_iterin, e
 #' @author Zhongshang Yuan, Xiang Zhou.
 #' 
 #' @examples 
-#' data(Examplesummary.rda)
-#' attach(Examplesummary.rda)
+#' data(Examplesummary)
+#' attach(Examplesummary)
 #' fmH1=PMR_summary(betaxin=betax,betayin=betay,Sigma1sin=Sigma1,Sigma2sin=Sigma2,samplen1=n1,samplen2=n2,gammain=0,alphain=0,max_iterin =1000, epsin=1e-5)
 #' fmH0alpha=PMR_summary(betaxin=betax,betayin=betay,Sigma1sin=Sigma1,Sigma2sin=Sigma2,samplen1=n1,samplen2=n2,gammain=0,alphain=1,max_iterin =1000, epsin=1e-5)
 #' fmH0gamma=PMR_summary(betaxin=betax,betayin=betay,Sigma1sin=Sigma1,Sigma2sin=Sigma2,samplen1=n1,samplen2=n2,gammain=1,alphain=0,max_iterin =1000, epsin=1e-5)
@@ -97,7 +98,8 @@ PMR_individual <- function(yin, zin, x1in, x2in, gammain, alphain, max_iterin, e
 #' @export
 #'
 
-PMR_summary <- function(betaxin, betayin, Sigma1sin, Sigma2sin, samplen1, samplen2, gammain, alphain, max_iterin, epsin) {
+PMR_summary <- function(betaxin, betayin, Sigma1sin, Sigma2sin, samplen1, samplen2, 
+                        gammain, alphain, max_iterin = 1000, epsin = 1e-05) {
   
   # call Rcpp to carry out computation
   PMR_summary_rcpp(betaxin = betaxin, 
