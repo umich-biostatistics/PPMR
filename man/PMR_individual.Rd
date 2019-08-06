@@ -39,18 +39,21 @@ the correlated instruments and horizontal pleiotropy in TWAS framework.
 \examples{
 data(Exampleindividual)
 attach(Exampleindividual)
-fmH1 = PMR_individual(yin=x, zin=y, x1in=zx, x2in=zy,gammain=0,alphain = 0,max_iterin =1000,epsin=1e-5)
+fmH1 = PMR_individual(yin=x, zin=y, x1in=zx, x2in=zy,
+                      gammain=0,alphain = 0,max_iterin =1000,epsin=1e-5)
 alpha<-fmH1$alpha
 gamma<-fmH1$gamma
-fmH0gamma = PMR_individual(yin=x,zin= y, x1in=zx, x2in=zy,gammain=1, alphain = 0,max_iterin =1000,epsin=1e-5)
-fmH0alpha = PMR_individual(yin=x, zin=y, x1in=zx, x2in=zy,gammain=0,alphain = 1,max_iterin =1000, epsin=1e-5)
-loglikH1=max(fmH1$loglik,na.rm=T)
-loglikH0gamma=max(fmH0gamma$loglik,na.rm=T)
-loglikH0alpha=max(fmH0alpha$loglik,na.rm=T)
+fmH0gamma = PMR_individual(yin=x,zin= y, x1in=zx, x2in=zy,gammain=1, 
+                           alphain = 0,max_iterin =1000,epsin=1e-5)
+fmH0alpha = PMR_individual(yin=x, zin=y, x1in=zx, x2in=zy,gammain=0,
+                           alphain = 1,max_iterin =1000, epsin=1e-5)
+loglikH1=max(fmH1$loglik,na.rm=TRUE)
+loglikH0gamma=max(fmH0gamma$loglik,na.rm=TRUE)
+loglikH0alpha=max(fmH0alpha$loglik,na.rm=TRUE)
 stat_alpha = 2 * (loglikH1 - loglikH0alpha)
-pvalue_alpha = pchisq(stat_alpha,1,lower.tail=F)
+pvalue_alpha = pchisq(stat_alpha,1,lower.tail=FALSE)
 stat_gamma = 2 * (loglikH1 - loglikH0gamma)
-pvalue_gamma = pchisq(stat_gamma,1,lower.tail=F)
+pvalue_gamma = pchisq(stat_gamma,1,lower.tail=FALSE)
 
 }
 \author{
