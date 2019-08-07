@@ -135,7 +135,7 @@ void loglike_twas_summary(const arma::mat& R, const arma::mat& Sigma1, const arm
 //*******************************************************************//
 //                MAIN FUNC                        //
 //*******************************************************************//
-//' PMR
+//' PPMR
 //' @param betaxin input data
 //' @param betayin input data
 //' @param Sigma1in matrix
