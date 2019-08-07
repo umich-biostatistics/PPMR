@@ -132,7 +132,7 @@ void loglike_twas(const arma::mat& R, const arma::vec& res_y, const arma::vec& r
 //*******************************************************************//
 //                MAIN FUNC                        //
 //*******************************************************************//
-//' PMR
+//' PPMR
 //' @param yin input data
 //' @param zin input data
 //' @param x1in matrix
