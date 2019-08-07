@@ -1,21 +1,21 @@
 Package: PPMR
-Title: Probabilistic two sample Mendelian Randomization
+Title: Probabilistic Two Sample Mendelian Randomization
 Type: Package
 Version: 1.0
 Authors@R: c(
     person(given = "Zhongshang", family = "Yuan", role = c("aut")),
     person(given = "Xiang", family = "Zhou", role = c("aut"), email = "xzhousph@umich.edu"),
     person(given = "Michael", family = "Kleinsasser", role = c("cre"), email = "mkleinsa@umich.edu"))
-Description: Efficient statitical inference of two-sample MR (Mendelian Randomization) analysis. 
-    It can account for the correlatded instruments and the horizontal pleiotropy, 
+Description: Efficient statistical inference of two-sample MR (Mendelian Randomization) analysis. 
+    It can account for the correlated instruments and the horizontal pleiotropy, 
     and can provide the accurate estimates of both causal effect and horizontal 
-    pleitropy effect as well as the two corresponding p-values.There are two main 
+    pleiotropy effect as well as the two corresponding p-values. There are two main 
     functions in the PMR package. One is PMR_individual for individual level data, 
     the other is PMR_summary for summary data.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-Imports: Rcpp (>= 1.0.0), RcppArmadillo
+Imports: Rcpp (>= 1.0.0)
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.1.1.9000
 NeedsCompilation: yes

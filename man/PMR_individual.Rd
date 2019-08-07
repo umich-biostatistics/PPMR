@@ -16,7 +16,7 @@ PMR_individual(yin, zin, x1in, x2in, gammain, alphain, max_iterin, epsin)
 \item{x2in}{standardized cis-genotype matrix in GWAS data.}
 
 \item{gammain}{indicator variable for constrained PMR model, with 1 for the null 
-model that there is no horiozntal pleiotropy.}
+model that there is no horizontal pleiotropy.}
 
 \item{alphain}{indicator variable for constrained PMR model, with 1 for the null 
 model that there is no causal effect.}
@@ -24,7 +24,7 @@ model that there is no causal effect.}
 \item{max_iterin}{The maximum iteration.}
 
 \item{epsin}{The convergence tolerance of the absolute value of the difference 
-between the nth and (n+1)th loglikelihood.}
+between the nth and (n+1)th log likelihood.}
 }
 \value{
 a list of estimates of model parameters, including the causal effect 

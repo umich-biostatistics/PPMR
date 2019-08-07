@@ -12,12 +12,12 @@
 #' @param x1in standardized cis-genotype matrix in eQTL data.
 #' @param x2in standardized cis-genotype matrix in GWAS data.
 #' @param gammain indicator variable for constrained PMR model, with 1 for the null 
-#' model that there is no horiozntal pleiotropy.
+#' model that there is no horizontal pleiotropy.
 #' @param alphain indicator variable for constrained PMR model, with 1 for the null 
 #' model that there is no causal effect.
 #' @param max_iterin The maximum iteration.
 #' @param epsin The convergence tolerance of the absolute value of the difference 
-#' between the nth and (n+1)th loglikelihood.
+#' between the nth and (n+1)th log likelihood.
 #' 
 #' @return a list of estimates of model parameters, including the causal effect 
 #' \code{alpha}, the horizontal pleiotropy effect \code{gamma}, and the two 
@@ -63,17 +63,17 @@ PMR_individual <- function(yin, zin, x1in, x2in, gammain, alphain, max_iterin, e
 #' data, which be calculated based on both the standardized complex trait value 
 #' and the standardized cis-genotype matrix.
 #' @param Sigma1sin the LD matrix in eQTL data.
-#' @param Sigma2sin the LD matrix in GWAS data.Both \code{Sigma2sin} and 
+#' @param Sigma2sin the LD matrix in GWAS data. Both \code{Sigma2sin} and 
 #' \code{sigma1sin} are often the same from the reference panel.
 #' @param samplen1 the sample size of eQTL data.
 #' @param samplen2 the sample size of GWAS data.
 #' @param gammain indicator variable for constrained model, with 1 for the null 
-#' model that there is no horiozntal pleiotropy.
+#' model that there is no horizontal pleiotropy.
 #' @param alphain indicator variable for constrained model, with 1 for the null 
 #' model that there is no causal effect.
 #' @param max_iterin The maximum iteration.
 #' @param epsin The convergence tolerance of the absolute value of the difference 
-#' between the nth and (n+1)th loglikelihood.
+#' between the nth and (n+1)th log likelihood.
 #' 
 #' @return A list of estimates of model parameters, including the causal effect 
 #' \code{alpha}, the horizontal pleiotropy effect \code{gamma}, and the two corresponding p values.
