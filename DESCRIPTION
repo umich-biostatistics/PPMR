@@ -1,4 +1,4 @@
-Package: PMR
+Package: PPMR
 Title: Probabilistic two sample Mendelian Randomization
 Type: Package
 Version: 1.0
@@ -19,5 +19,5 @@ Imports: Rcpp (>= 1.0.0), RcppArmadillo
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 6.1.1.9000
 NeedsCompilation: yes
-BugReports: https://github.com/umich-biostatistics/PMR/issues
+BugReports: https://github.com/umich-biostatistics/PPMR/issues
 Packaged: 2019-08-05 17:08:32 UTC; zhongshy

@@ -8,7 +8,7 @@ using namespace Rcpp;
 
 // PMR_individual
 SEXP PMR_individual(SEXP yin, SEXP zin, SEXP x1in, SEXP x2in, SEXP gammain, SEXP alphain, SEXP max_iterin, SEXP epsin);
-RcppExport SEXP _PMR_PMR_individual(SEXP yinSEXP, SEXP zinSEXP, SEXP x1inSEXP, SEXP x2inSEXP, SEXP gammainSEXP, SEXP alphainSEXP, SEXP max_iterinSEXP, SEXP epsinSEXP) {
+RcppExport SEXP _PPMR_PMR_individual(SEXP yinSEXP, SEXP zinSEXP, SEXP x1inSEXP, SEXP x2inSEXP, SEXP gammainSEXP, SEXP alphainSEXP, SEXP max_iterinSEXP, SEXP epsinSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -26,7 +26,7 @@ END_RCPP
 }
 // PMR_summary
 SEXP PMR_summary(SEXP betaxin, SEXP betayin, SEXP Sigma1sin, SEXP Sigma2sin, SEXP samplen1, SEXP samplen2, SEXP gammain, SEXP alphain, SEXP max_iterin, SEXP epsin);
-RcppExport SEXP _PMR_PMR_summary(SEXP betaxinSEXP, SEXP betayinSEXP, SEXP Sigma1sinSEXP, SEXP Sigma2sinSEXP, SEXP samplen1SEXP, SEXP samplen2SEXP, SEXP gammainSEXP, SEXP alphainSEXP, SEXP max_iterinSEXP, SEXP epsinSEXP) {
+RcppExport SEXP _PPMR_PMR_summary(SEXP betaxinSEXP, SEXP betayinSEXP, SEXP Sigma1sinSEXP, SEXP Sigma2sinSEXP, SEXP samplen1SEXP, SEXP samplen2SEXP, SEXP gammainSEXP, SEXP alphainSEXP, SEXP max_iterinSEXP, SEXP epsinSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -46,12 +46,12 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_PMR_PMR_individual", (DL_FUNC) &_PMR_PMR_individual, 8},
-    {"_PMR_PMR_summary", (DL_FUNC) &_PMR_PMR_summary, 10},
+    {"_PPMR_PMR_individual", (DL_FUNC) &_PPMR_PMR_individual, 8},
+    {"_PPMR_PMR_summary", (DL_FUNC) &_PPMR_PMR_summary, 10},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_PMR(DllInfo *dll) {
+RcppExport void R_init_PPMR(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

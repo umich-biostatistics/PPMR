@@ -1,3 +1,5 @@
-useDynLib(PMR, .registration=TRUE)
+useDynLib(PPMR, .registration=TRUE)
+importFrom(Rcpp, sourceCpp)
 importFrom(Rcpp, evalCpp)
-exportPattern("^[[:alpha:]]+")
+export(PMR_individual)
+export(PMR_summary)
